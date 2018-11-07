@@ -4,15 +4,13 @@ import java.awt.event.ActionEvent;
 import javax.swing.Timer;
 import javax.swing.JOptionPane;
 public class MorningRushTester {
-
+	private static final int DELAY = 1000;
 	public MorningRushTester() {
-		// TODO Auto-generated constructor stub
 	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		final int DELAY = 1000;
 		final int initialGulps = 5;
 		class DrinkCoffee implements ActionListener{
 			private int gulps;
@@ -35,7 +33,7 @@ public class MorningRushTester {
 			}
 		}
 
-		DrinkCoffee dc = new DrinkCoffee(5);
+		DrinkCoffee dc = new DrinkCoffee(initialGulps);
 		Timer t = new Timer(DELAY,dc);
 		t.start();
 		JOptionPane.showMessageDialog(null,"Just about to go to school"); 
